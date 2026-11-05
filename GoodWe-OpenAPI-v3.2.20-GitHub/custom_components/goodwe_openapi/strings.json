@@ -1,0 +1,81 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "GoodWe OpenAPI – account",
+        "description": "Enter API credentials once. Add individual Plant IDs in integration Options after setup.",
+        "data": {
+          "client_id": "GOODWE_APP_ID / Client ID",
+          "client_secret": "GOODWE_APP_SECRET / Client Secret",
+          "scan_interval": "Update interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid API credentials",
+      "cannot_connect": "Cannot connect to GoodWe API"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Manage selected plants",
+        "menu_options": {
+          "add_plant": "Add Plant ID",
+          "remove_plant": "Remove Plant ID",
+          "settings": "Update interval",
+          "edit_client_number": "Edit client number",
+          "find_plant_by_sn": "Find Plant ID by inverter SN"
+        }
+      },
+      "add_plant": {
+        "title": "Add a plant",
+        "description": "Enter one Plant ID. Repeat this action for additional plants.",
+        "data": {
+          "plant_id": "Plant ID",
+          "client_number": "Client number (4 digits, optional)"
+        }
+      },
+      "remove_plant": {
+        "title": "Remove a plant",
+        "data": {
+          "plant_id": "Plant ID"
+        }
+      },
+      "settings": {
+        "title": "Update interval",
+        "data": {
+          "scan_interval": "Update interval (seconds)"
+        }
+      },
+      "edit_client_number": {
+        "title": "Edit client number",
+        "data": {
+          "plant_id": "Plant ID",
+          "client_number": "Client number (4 digits)"
+        }
+      },
+      "find_plant_by_sn": {
+        "title": "Find Plant ID by inverter SN",
+        "description": "Search inverter serial numbers in selected Plant IDs. Unselected account plants are not included.",
+        "data": {
+          "inverter_sn": "Inverter serial number (SN)"
+        }
+      },
+      "find_plant_result": {
+        "title": "Plant ID search result",
+        "description": "{result}"
+      }
+    },
+    "error": {
+      "invalid_plant_id": "Invalid Plant ID format",
+      "already_added": "This Plant ID is already selected",
+      "lookup_failed": "Plant search failed. Check Home Assistant logs.",
+      "cannot_connect": "Integration is not ready"
+    },
+    "abort": {
+      "no_plants": "No Plant IDs have been selected yet",
+      "lookup_complete": "Lookup finished"
+    }
+  }
+}

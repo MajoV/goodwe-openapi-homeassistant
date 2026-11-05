@@ -1,0 +1,10 @@
+{
+  "domain": "goodwe_openapi",
+  "name": "GoodWe OpenAPI by home-co",
+  "version": "3.2.20",
+  "documentation": "https://openapi.goodwe.com",
+  "issue_tracker": "https://openapi.goodwe.com",
+  "config_flow": true,
+  "iot_class": "cloud_polling",
+  "requirements": []
+}
